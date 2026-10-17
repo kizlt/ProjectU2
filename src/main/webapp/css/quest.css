@@ -1,0 +1,85 @@
+:root {
+    --bg: #f4f1ea;
+    --ink: #26231d;
+    --accent: #2f5d50;
+    --accent-hover: #264a40;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 72px;
+}
+
+h1, .title {
+    font-size: 34px;
+    margin: 0 0 24px;
+    letter-spacing: 0.02em;
+}
+
+.lead {
+    margin: 0 0 32px;
+    color: #4a463d;
+}
+
+.scene-text {
+    white-space: pre-wrap;
+    background: #fffdf7;
+    border: 1px solid #ddd6c6;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.button,
+button.button {
+    display: inline-block;
+    align-self: flex-start;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 22px;
+    font-family: inherit;
+    font-size: 19px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.button:hover,
+button.button:hover {
+    background: var(--accent-hover);
+}
+
+.button:focus-visible,
+button.button:focus-visible {
+    outline: 3px solid #b58a3c;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .button,
+    button.button {
+        transition: none;
+    }
+}
